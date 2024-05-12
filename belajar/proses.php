@@ -31,7 +31,6 @@ if (!isset($_SESSION["pesanan"])) {
 function tambahPesanan($menu_id, $jumlah)
 {
     $item_ditemukan = false;
-
     foreach ($_SESSION["pesanan"] as &$item) {
         if (isset($item["menu_id"]) && $item["menu_id"] == $menu_id) {
             $item["jumlah"] += $jumlah;
@@ -41,7 +40,7 @@ function tambahPesanan($menu_id, $jumlah)
     }
 
     if (!$item_ditemukan) {
-        echo "<script type='text/javascript'>alert('Pesanan tidak tersedia');</script>";
+        array_push($_SESSION["pesanan"], array("menu_id" => $menu_id, "jumlah" => $jumlah));
     }
 }
 

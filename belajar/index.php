@@ -10,11 +10,11 @@
 <body>
     <form action="proses.php" method="post">
         <label for="nama">Nama Pelanggan:</label><br>
-        <input type="text" name="nama"><br>
+        <input type="text" name="nama" required><br>
         <label for="tanggal">Tanggal Pemesanan:</label><br>
-        <input type="date" name="tanggal"><br>
+        <input type="date" name="tanggal" required><br>
         <label for="jam">Jam Pemesanan:</label><br>
-        <input type="time" name="jam"><br><br>
+        <input type="time" name="jam" required><br><br>
         <input type="submit" name="submit" value="Lanjutkan ke Pemesanan">
     </form>
 </body>

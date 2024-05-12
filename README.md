@@ -1,1 +1,2 @@
-## Exercise Python 
+## Exercise Cash Register
+
